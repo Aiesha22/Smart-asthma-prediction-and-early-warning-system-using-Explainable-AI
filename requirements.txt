@@ -6,5 +6,8 @@ xgboost
 shap
 matplotlib
 plotly
+seaborn
 imbalanced-learn
+joblib
 yagmail
+python-dotenv
