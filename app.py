@@ -8,26 +8,8 @@ from shap_analysis import get_shap_values
 from weather_api import get_weather
 from early_warning import early_warning
 from login import login 
-
-if "logged_in" not in st.session_state:
-    st.session_state["logged_in"] = False
-
-if not st.session_state["logged_in"]:
-    login()
-    st.stop()
-
-if st.sidebar.button("Logout"):
-    st.session_state.logged_in = False
-    st.rerun()  
-
-st.sidebar.markdown("---")
-
-if st.sidebar.button("🚪 Logout"):
-
-    st.session_state["logged_in"] = False
-    st.rerun()      
-
 from translations import translations
+from PIL import Image
 from database import (
     create_table,
     create_users_table,
@@ -36,16 +18,37 @@ from database import (
     delete_history
 
 )
-create_table()
-create_users_table()
 
-# -----------------------------
-# Page Config
-# -----------------------------
 st.set_page_config(
     page_title="Smart Asthma Prediction",
     layout="wide"
 )
+
+logo = Image.open("assets/logo.png")
+
+st.sidebar.image(
+    logo,
+    width=150
+)
+
+
+if "logged_in" not in st.session_state:
+    st.session_state["logged_in"] = False
+
+
+if not st.session_state["logged_in"]:
+    login()
+    st.stop()
+
+
+ 
+
+st.sidebar.markdown("---")
+
+if st.sidebar.button("🚪 Logout"):
+
+    st.session_state["logged_in"] = False
+    st.rerun()      
 
 # -----------------------------
 # Language Selection
@@ -71,8 +74,10 @@ st.markdown(t["system_description"])
 # -----------------------------
 st.sidebar.title("Navigation")
 
+st.sidebar.title(t["navigation"])
+
 page = st.sidebar.radio(
-    "Go To",
+    t["go_to"],
     [
         "Patient Assessment",
         "Dataset Analytics",

@@ -2,6 +2,8 @@ import streamlit as st
 import sqlite3
 import hashlib
 from register import register
+from forgot_password import forgot_password
+from PIL import Image
 
 DATABASE = "asthma.db"
 
@@ -10,20 +12,33 @@ def hash_password(password):
 
 def login():
 
+    logo = Image.open("assets/logo.png")
+
+    st.image(
+    logo,
+    width=150
+)
+
     choice = st.sidebar.selectbox(
         "Select",
-        ["Login", "Register"]
+        ["Login", "Register", "Forgot Password"]
     )
 
     if choice == "Register":
         register()
+
+    elif choice == "Forgot Password":
+        forgot_password()
 
     else:
 
         st.title("🔐 Smart Asthma Prediction System")
 
         username = st.text_input("Username")
-        password = st.text_input("Password", type="password")
+        password = st.text_input(
+            "Password",
+            type="password"
+        )
 
         if st.button("Login"):
 
@@ -35,7 +50,10 @@ def login():
                 SELECT * FROM users
                 WHERE username=? AND password=?
                 """,
-                (username, hash_password(password))
+                (
+                    username,
+                    hash_password(password)
+                )
             )
 
             user = cursor.fetchone()

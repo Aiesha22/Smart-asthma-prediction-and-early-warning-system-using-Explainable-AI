@@ -1,257 +1,241 @@
 # 🫁 Smart Asthma Prediction and Early Detection System using Explainable AI
 
-## 📌 Project Overview
+## 📌 Overview
 
-The **Smart Asthma Prediction and Early Detection System using Explainable AI** is a machine learning-based healthcare application designed to predict asthma risk by combining **patient medical data**, **environmental factors**, and **weather conditions**. The system provides an early assessment of asthma risk along with personalized recommendations and explainable AI insights to help users understand the prediction.
+The **Smart Asthma Prediction and Early Detection System** is an AI-powered healthcare application designed to predict asthma risk at an early stage using Machine Learning and Explainable AI (XAI).
 
-This project is developed using **Python**, **Streamlit**, **Scikit-learn**, **XGBoost**, and **SHAP (Explainable AI)** to create an interactive and user-friendly dashboard.
+The system combines **patient health information**, **environmental factors**, and **weather conditions** to provide asthma risk prediction, personalized recommendations, and explainable insights using SHAP.
 
----
-
-## 🎯 Objectives
-
-* Predict asthma risk using patient health information.
-* Analyze environmental conditions that may trigger asthma.
-* Provide personalized recommendations for asthma prevention.
-* Explain prediction results using Explainable AI (SHAP).
-* Support multiple languages for improved accessibility.
+The goal of this project is to support early detection, improve awareness of asthma triggers, and help users understand the factors influencing their prediction.
 
 ---
 
-## ✨ Features
+# 🚀 Features
 
-* 👤 Patient Medical Assessment
-* 🌍 Environmental Risk Analysis
-* 🌦️ Weather Data Integration
-* 🤖 Machine Learning-Based Prediction
-* 📊 Explainable AI (SHAP)
-* 📈 Interactive Dashboard using Streamlit
-* 💾 SQLite Database Integration
-* 🌐 Multilingual User Interface (English, Telugu, Hindi, Tamil, Urdu)
-* 💡 Personalized Health Recommendations
+## 🔐 User Authentication
 
----
+- User Registration
+- Email OTP Verification
+- Secure Password Hashing
+- Login System
+- Forgot Password with Email Verification Code
 
-## 🛠️ Technologies Used
 
-### Programming Language
+## 🩺 Asthma Risk Prediction
 
-* Python
+- Predicts asthma risk using Machine Learning models
+- Provides prediction probability/confidence score
+- Classifies users into:
+  - Asthma Risk
+  - Healthy
 
-### Libraries
 
-* Streamlit
-* Pandas
-* NumPy
-* Scikit-learn
-* XGBoost
-* SHAP
-* Plotly
-* Joblib
-* SQLite3
+## 🧠 Explainable AI (XAI)
 
-### Database
+- SHAP-based model explanation
+- Identifies important factors affecting prediction
+- Improves transparency and trust in AI decisions
 
-* SQLite
 
-### Development Tools
+## 🌍 Environmental Risk Analysis
 
-* Visual Studio Code
-* Git
-* GitHub
+The system considers environmental conditions:
 
----
+- Air Quality
+- Weather Conditions
+- Temperature
+- Humidity
 
-## 📂 Project Structure
 
-```text
-Smart Asthma Prediction and Early Detection System/
-│
-├── app.py
-├── database.py
-├── asthma.db
-├── requirements.txt
-├── README.md
-│
-├── data/
-│   ├── asthma_disease_data.csv
-│   ├── Air Quality.csv
-│   └── weather_dataset_2025.csv
-│
-├── explainability/
-│   └── shap_analysis.py
-│
-├── models/
-│   ├── xgboost_model.py
-│   ├── risk_score.py
-│   ├── environment_risk.py
-│   └── final_risk_score.py
-│
-├── notebooks/
-│
-├── utils/
-│
-└── translations.py
-```
+## ⚠️ Early Warning System
 
----
+Provides:
 
-## 📊 Dataset
+- Risk alerts
+- Personalized recommendations
+- Preventive suggestions
 
-The project uses three datasets:
 
-### 1. Patient Medical Dataset
+## 📊 Data Analytics Dashboard
 
-Contains:
+Includes:
 
-* Age
-* Gender
-* BMI
-* Smoking Status
-* Family History
-* Lung Function (FEV1, FVC)
-* Symptoms
-* Diagnosis
+- Dataset visualization
+- Feature analysis
+- Risk distribution
+- Environmental insights
 
-### 2. Air Quality Dataset
 
-Contains:
-
-* CO
-* NO₂
-* NOx
-* O₃
-* Temperature
-* Humidity
-* Air Quality Indicators
-
-### 3. Weather Dataset
-
-Contains:
-
-* Temperature
-* Humidity
-* Wind Speed
-* Rainfall
-* Weather Condition
-
----
-
-## ⚙️ Installation
-
-### Clone the repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-```
-
-### Navigate to the project folder
-
-```bash
-cd YOUR_REPOSITORY
-```
-
-### Create a virtual environment
-
-```bash
-python -m venv .venv
-```
-
-### Activate the virtual environment
-
-**Windows**
-
-```bash
-.venv\Scripts\activate
-```
-
-**Linux / macOS**
-
-```bash
-source .venv/bin/activate
-```
-
-### Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## ▶️ Running the Application
-
-```bash
-streamlit run app.py
-```
-
-The application will start locally and can be accessed in your browser.
-
----
-
-## 📈 Workflow
-
-1. Enter patient medical information.
-2. Analyze environmental and weather conditions.
-3. Predict asthma risk using trained machine learning models.
-4. Display Explainable AI (SHAP) visualizations.
-5. Generate personalized recommendations.
-6. View the interface in the selected language.
-
----
-
-## 🤖 Machine Learning Models
-
-* Random Forest Classifier
-* XGBoost Classifier
-
----
-
-## 📊 Explainable AI
-
-The project uses **SHAP (SHapley Additive exPlanations)** to explain model predictions by showing how each feature contributes to the final asthma risk score.
-
----
-
-## 🌐 Multilingual Support
+## 🌐 Multi-Language Support
 
 The application supports:
 
-* English
-* Telugu
-* Hindi
-* Tamil
-* Urdu
+- English
+- Telugu
+- Hindi
+- Tamil
+- Urdu
+
+
+## 📄 Report Generation
+
+Generates prediction reports containing:
+
+- Patient information
+- Risk level
+- Confidence score
+- Recommendations
 
 ---
 
-## 🔮 Future Enhancements
+# 🏗️ System Architecture
+             User
+              |
+              |
+      Streamlit Web Application
+              |
+    -------------------------
+    |                       |
 
-* Real-time AQI integration
-* IoT sensor integration
-* Mobile application
-* Doctor dashboard
-* Cloud deployment
-* Patient history tracking
-* Email and SMS alerts
-* Hospital integration
-* Voice assistance
-* Wearable device integration
+    
+---
+
+# 🛠️ Technologies Used
+
+## Programming Language
+
+- Python
+
+
+## Machine Learning
+
+- Scikit-learn
+- XGBoost
+- Random Forest
+
+
+## Explainable AI
+
+- SHAP
+
+
+## Data Processing
+
+- Pandas
+- NumPy
+
+
+## Visualization
+
+- Plotly
+- Matplotlib
+
+
+## Application Framework
+
+- Streamlit
+
+
+## Database
+
+- SQLite
+
+
+## Other Tools
+
+- Git
+- GitHub
+- VS Code
 
 ---
 
-## 👩‍💻 Author
+# 📂 Project Structure
+Smart-Asthma-Prediction-XAI/
 
-**Shaik Aiesha**
+│
+├── app.py
+├── login.py
+├── register.py
+├── forgot_password.py
+├── database.py
+├── email_utils.py
+├── translations.py
+│
+├── models/
+│ └── asthma_model.pkl
+│
+├── explainability/
+│ └── shap_analysis.py
+│
+├── data/
+│ ├── asthma_disease_data.csv
+│ ├── Air Quality.csv
+│ └── weather_dataset_2025.csv
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
 
-B.Tech – Computer Science Engineering (DFS & AI)
-
-Dr. M.G.R. Educational and Research Institute
-
-GitHub: https://github.com/Aiesha22
 
 ---
 
-## 📄 License
+# 📊 Machine Learning Models
 
-This project is developed for academic and educational purposes.
+The project uses:
+
+## Random Forest Classifier
+
+Used for asthma risk classification.
+
+Advantages:
+
+- Handles complex medical features
+- Reduces overfitting
+- Provides feature importance
+
+
+## XGBoost Classifier
+
+Used for improved prediction performance.
+
+Advantages:
+
+- High accuracy
+- Efficient learning
+- Handles structured medical data
+
+
+---
+
+# 📈 Explainable AI using SHAP
+
+SHAP (SHapley Additive exPlanations) is used to explain model predictions.
+
+It helps answer:
+
+- Why was asthma risk predicted?
+- Which factors increased risk?
+- Which factors reduced risk?
+
+Example factors:
+
+- Age
+- BMI
+- Smoking
+- Allergies
+- Wheezing
+- Family History
+- Environmental Conditions
+
+<Markdown>
+<p align="center">
+<img src="assets/logo.png" width="200">
+</p>
+
+<h1 align="center">
+Smart Asthma Prediction and Early Detection System using Explainable AI
+</h1>
+
+<p align="center">
+AI-powered asthma risk prediction using Machine Learning and Explainable AI
+</p>

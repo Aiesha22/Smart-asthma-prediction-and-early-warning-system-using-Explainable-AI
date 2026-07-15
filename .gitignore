@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+
+asthma.db
+
+.env
+
+*.csv
+
+*.pkl
