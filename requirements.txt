@@ -3,8 +3,9 @@ pandas
 numpy
 plotly
 scikit-learn
-joblib
 xgboost
 shap
+joblib
 matplotlib
-openpyxl
+requests
+reportlab
